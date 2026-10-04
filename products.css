@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fbf8;
+    color: #18352e;
+}
+
+header {
+    text-align: center;
+    padding: 45px 20px;
+    background: linear-gradient(135deg, #dff7ef, white);
+}
+
+header h1 {
+    color: #16866d;
+    margin-bottom: 8px;
+}
+
+.filters {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.filters div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccdcd7;
+    border-radius: 8px;
+    min-width: 170px;
+}
+
+.product-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.product-card h2 {
+    color: #16866d;
+    margin-bottom: 8px;
+}
+
+.category {
+    display: inline-block;
+    background: #dff7ef;
+    color: #16866d;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.rating {
+    color: #e6a700;
+    font-weight: bold;
+}
+
+.no-products {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 50px;
+    color: #60736e;
+}
+
+@media (max-width: 800px) {
+    .product-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .filters {
+        margin: 20px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}
